@@ -37,3 +37,10 @@ names = ['Ryley', 'Edan', 'Reagan', 'Henry', 'Caius', 'Jane', 'Guto', 'Sonya', '
 index = int(input("Enter an index representing the name from the list you'd like to see!"))
 
 # Type your code here.
+# Catch for out of range index numbers.
+if(index<0 or index>=len(names)):
+    index= int(input("Exception! list index out of range. Please index number inside list range."))
+
+
+
+print("done")

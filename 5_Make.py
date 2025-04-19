@@ -26,5 +26,19 @@ Exception: Negative step count entered.
 
 # Define your method here
 
+def steps_to_miles(steps):
+    if steps < 0:
+        raise ValueError('Must enter a positive number')
+    return steps / 2000
+
 if __name__ == '__main__':
-    # Type your code here.
+    neg=False
+    while neg==False:
+        try:
+             steps = int(input("Enter number of steps taken: "))
+             miles = steps_to_miles(steps)
+             print(f'miles walked:\n{miles:.2f}')
+             neg=True
+        except ValueError as excpt:
+            print(excpt)
+        
